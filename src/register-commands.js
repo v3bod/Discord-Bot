@@ -10,6 +10,16 @@ const commands = [
         name: "first_name",
         description: "nik brk",
         type: ApplicationCommandOptionType.Number,
+        choices: [
+          {
+               name: "one",
+               value: 1,
+          },
+          {
+               name: "tow",
+               value: 2,
+          }
+        ],
         required: true,
       },
       {
