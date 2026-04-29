@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { Client, IntentsBitField, EmbedBuilder, Embed } = require('discord.js');
+const { Client, IntentsBitField, EmbedBuilder, Embed, userMention, User, Message } = require('discord.js');
 
 const client = new Client({
   intents: [
@@ -19,6 +19,7 @@ client.on("interactionCreate", async (interaction) => {
   if (!interaction.isChatInputCommand()) return;
 
   if (interaction.commandName === "test") {
+    const user = interaction.user;
      const embed = new EmbedBuilder().setTitle("l7wak").setDescription("nik brk").setColor('Random').setFields(
       {
       name: "idk",
@@ -30,7 +31,7 @@ client.on("interactionCreate", async (interaction) => {
       value: "nik brk",
       inline: true,
     },
-    )
+    ).setImage(user.displayAvatarURL({ dynamic: true, size: 64 }));
 
      interaction.reply({embeds: [embed]})
    
