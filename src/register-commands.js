@@ -3,32 +3,8 @@ const { REST, Routes, ApplicationCommandOptionType } = require("discord.js");
 
 const commands = [
   {
-    name: "add",
-    description: "command w khlas",
-    options: [
-      {
-        name: "first_name",
-        description: "nik brk",
-        type: ApplicationCommandOptionType.Number,
-        choices: [
-          {
-               name: "one",
-               value: 1,
-          },
-          {
-               name: "tow",
-               value: 2,
-          }
-        ],
-        required: true,
-      },
-      {
-        name: "second_name",
-        description: "nik brk",
-        type: ApplicationCommandOptionType.Number,
-        required: true,
-      }
-    ]
+    name: "test",
+    description: "lol",
   }
 ];
 
